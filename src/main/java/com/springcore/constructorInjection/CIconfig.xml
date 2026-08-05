@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="https://www,springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	https://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<bean class="com.springcore.constructorInjection.Student"
+		name="Shubham" c:cert-ref="Java">
+		<constructor-arg value="Shubham" />
+		<constructor-arg value="1234" type="int" />
+		<constructor-arg>
+			<list>
+				<value>1234567890</value>
+				<value>0987654321</value>
+			</list>
+		</constructor-arg>
+
+	</bean>
+
+	<!-- constructor injection using c: schema -->
+	<bean class="com.springcore.constructorInjection.Certificate"
+		name="Java" c:name="Java Backend Development with Agentic AI" />
+
+	<bean
+		class="com.springcore.constructorInjection.AmbiguityAddition"
+		name="add">
+		<constructor-arg value="1.2" type="double" index="1" />
+		<constructor-arg value="2.1" type="double" index="0" />
+	</bean>
+
+</beans>

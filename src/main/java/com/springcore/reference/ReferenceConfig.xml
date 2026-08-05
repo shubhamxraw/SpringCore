@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="https://www,springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	https://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<bean name="i20N" class="com.springcore.reference.Car"
+		p:eng-ref="automatic" p:carName="i20N" p:modelYear="2026" />
+
+	<bean name="automatic" class="com.springcore.reference.Engine"
+		p:engineNumber="1234567890" p:Type="automatic" />
+
+
+</beans>
